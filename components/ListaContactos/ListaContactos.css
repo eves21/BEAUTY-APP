@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    height: 100vh;
+}
+/* Header */
+.header{
+    background-color: #be4b98;
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+}
+.header__title{
+    font-size: 20px;
+    font-weight: 400;
+}
+/* Form */
+.form{
+    padding: 50px 20px;
+}
+.form__label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 300;
+}
+.form__input{
+    display: block;
+    margin: 10px 0;
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: #f6f6f6;
+}
+.form__button{
+    display: block;
+    margin: 30px 0;
+    padding: 15px 0;
+    text-align: center;
+    color: #fff;
+    background-color: #be4b98;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* Cards */
+.cards{
+    padding: 20px 20px 40px;
+}
+.card{
+    position: relative;
+    background-color: #d1d8e0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 11px 14px 40px -14px rgba(0,0,0,0.75);
+    margin:20px 0;
+}
+.card__text{
+    font-size: 18px;
+    font-weight: 300;
+    margin: 10px 0;
+}
+.card__delete{
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 50%;
+    border: 2px solid red;
+    color: red;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+}
+
+/* Footer */
+.footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #be4b98;
+    color: #fff;
+    padding: 10px 10px; 
+    text-align: end;
+    display: flex;
+    justify-content: space-between;  
+}
+.footer__button{
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .cards{
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: 0 auto;
+    }  
+}

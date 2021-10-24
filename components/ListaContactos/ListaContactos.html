@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="contactApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./ListaContactos.css">
+    <title>Agregar Productos!</title>
+</head>
+<body ng-controller="ListaContactosController">
+    <header class="header">
+        <h1 class="header__title">Tus Productos!</h1>
+        <p class="header__text">{{user}}</p>
+    </header>
+    <section class="cards">
+        <input type="text" class="form__input" placeholder="Buscar..." ng-model="buscarInput">
+        <div class="card" ng-repeat="contacto in contactos | filter:buscarInput">
+            <span class="card__delete" ng-click="eliminar(contacto.correo)">X</span>
+            <p class="card__text"><strong>Nombre Del Producto: </strong>{{contacto.nombre}}</p>
+            <p class="card__text"><strong>Número de Referencia: </strong>{{contacto.telefono}}</p>            
+        </div>         
+    </section>
+
+    <footer class="footer">
+        <a class="footer__button" ng-click="salir()">Salir</a>
+        <a href="../Crear/Crear.html" class="footer__button">Agregar Producto</a>
+    </footer>
+    
+    <!-- Librerias -->
+    <!-- Angularjs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>    
+    <!-- Sweet Alert js -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>   
+    
+    <!-- Controllers -->
+    <!-- App -->
+    <script src="../App.js"></script>
+    <!-- crearController -->
+    <script src="./ListaContactosController.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="contactApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Crear.css">
+    <title>Agregar Producto!</title>
+</head>
+<body ng-controller="CrearController">
+    <header class="header">
+        <h1 class="header__title">Agregar Producto!</h1>
+    </header>
+    <section class="form">
+        <label for="name" class="form__label">Producto</label>
+        <input type="text" id="name" class="form__input" placeholder="Ingresa el nombre del producto" ng-model="nameInput">
+        <label for="code" class="form__label">Referencia</label>
+        <input type="text" id="code" class="form__input" placeholder="Ingresa el número de Referencia" ng-model="codeInput">
+         <a class="form__button" ng-click="crear()">AGREGAR</a>
+    </section>
+    <footer class="footer">
+        <a href="../ListaContactos/ListaContactos.html" class="footer__button">Regresar</a>
+    </footer>
+    
+    <!-- Librerias -->
+    <!-- Angularjs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>    
+    <!-- Sweet Alert js -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>   
+    
+    <!-- Controllers -->
+    <!-- App -->
+    <script src="../App.js"></script>
+    <!-- crearController -->
+    <script src="./CrearController.js"></script>
+</body>
+</html>

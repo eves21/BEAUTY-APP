@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="contactApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Registro.css">
+    <title>Registro a Beauty Rouse!</title>
+</head>
+<body ng-controller="RegistroController">
+    <header class="header">
+        <h1 class="header__title">Registrate en Beauty Rouse!</h1>
+    </header>
+    <section class="form">
+        <label for="email" class="form__label">Correo</label>
+        <input type="email" id="email" class="form__input" placeholder="Ingresa el correo electrónico" ng-model="emailInput">
+        <label for="password" class="form__label">Contraseña</label>
+        <input type="password" id="password" class="form__input" placeholder="Ingresa la contraseña" ng-model="passwordInput">
+        <label for="verifyPassword" class="form__label">Repetir Contraseña</label>
+        <input type="password" id="verifyPassword" class="form__input" placeholder="Ingresa la contraseña" ng-model="verifyPasswordInput">
+        <a class="form__button" ng-click="registrar()">REGISTRAR</a>
+    </section>
+    <footer class="footer">
+        <a href="../Login/Login.html" class="footer__button">Login</a>
+    </footer>
+    
+    <!-- Librerias -->
+    <!-- Angularjs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>    
+    <!-- Sweet Alert js -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>   
+    
+    <!-- Controllers -->
+    <!-- App -->
+    <script src="../App.js"></script>
+    <!-- regitroController -->
+    <script src="./RegistroController.js"></script>
+</body>
+</html>
